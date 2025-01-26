@@ -42,7 +42,7 @@
   - Enable **Capture MIDI**, move your encoder for the UP action, and select the detected MIDI message.
   - Repeat for DOWN, LEFT, and RIGHT.
 
-### 4. Adjust Movement Sensitivity
+### 4. Adjust Movement Sensitivity (Optional)
 - In **[3] INIT Variables > [1]Set Global Vars**, adjust:
   ```plaintext
   // Movement Speed
