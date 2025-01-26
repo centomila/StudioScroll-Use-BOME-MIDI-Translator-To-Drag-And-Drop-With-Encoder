@@ -1,0 +1,174 @@
+; ------- Bome MIDI Translator: signed project file
+; ------- You can modify this file as you like, but that will invalidate the
+; ------- signature so that it cannot be opened in the BomeBox or MT Player anymore.
+;
+[MIDI.routes]
+In0=Controller MIDI IN
+In1=Bome Virtual Port 2
+Out0=Bome Virtual Port 1
+Out1=Controller MIDI Out
+
+[Preset.0]
+Active=1
+Comments=
+Incoming0=None
+Incoming1=MID1B01F41
+Incoming2=MID1B01F3F
+Incoming3=MID1B01E3F
+Incoming4=MID1B01E41
+Name=MIDI Encoders
+Name0=----------SET HERE YOUR ENCODER MIDI MESSAGES----------
+Name1=UP
+Name2=DOWN
+Name3=LEFT
+Name4=RIGHT
+Options0=Actv00Stop00OutO00
+Options1=Actv01Stop00OutO00
+Options2=Actv01Stop00OutO00
+Options3=Actv01Stop00OutO00
+Options4=Actv01Stop00OutO00
+Outgoing0=None
+Outgoing1=Prfm<Outgoing Action="Perform"><Name>Up Action</Name></Outgoing>
+Outgoing2=Prfm<Outgoing Action="Perform"><Name>Down Action</Name></Outgoing>
+Outgoing3=Prfm<Outgoing Action="Perform"><Name>Left Action</Name></Outgoing>
+Outgoing4=Prfm<Outgoing Action="Perform"><Name>Right Action</Name></Outgoing>
+PresetSwitchIgnore=0
+
+[Preset.1]
+Active=0
+Comments=
+Incoming0=None
+Incoming1=KAM10000KSQ100020F52F5
+Incoming2=KAM10000KSQ100020FC2FC
+Incoming3=KAM10000KSQ100021AF3AF
+Incoming4=KAM10000KSQ100021AE3AE
+Name=Keyboard Volume
+Name0=----------SET HERE YOUR KB VOLUME WHEEL----------
+Name1=UP with VK245
+Name2=DOWN with VK252
+Name3=UP with Volume UP
+Name4=DOWN with Volume DOWN
+Options0=Actv00Stop00OutO00StMa00000004label003C__cmt>// If you don't want to change the system volume whilelabel004B__cmt>// using the keyboard volume wheel, you can reassign the volume wheellabel0040__cmt>// with PowerToys or AutoHotkey to some virtual keyboards.label0030__cmt>// I used VK245 and VK252 in this example.
+Options1=Actv01Stop00OutO00
+Options2=Actv01Stop00OutO00
+Options3=Actv01Stop00OutO00
+Options4=Actv01Stop00OutO00
+Outgoing0=None
+Outgoing1=Prfm<Outgoing Action="Perform"><Name>Up Action</Name></Outgoing>
+Outgoing2=Prfm<Outgoing Action="Perform"><Name>Down Action</Name></Outgoing>
+Outgoing3=Prfm<Outgoing Action="Perform"><Name>Up Action</Name></Outgoing>
+Outgoing4=Prfm<Outgoing Action="Perform"><Name>Down Action</Name></Outgoing>
+PresetSwitchIgnore=0
+
+[Preset.2]
+Active=1
+Comments=
+Name=-----------------------
+PresetSwitchIgnore=0
+
+[Preset.3]
+Active=1
+Comments=
+Incoming0=EnDi02
+Incoming1=Tim0TimT0004Init
+Name=INIT Variables
+Name0=Open Project
+Name1=Set Global Vars
+Options0=Actv01Stop00OutO00
+Options1=Actv01Stop00OutO00StMa00000009label003B__cmt>// Movement Speed (Global Positive | Global Negative)gp=1gn=-1label0006__cmt>label0037__cmt>// Delay before releasing button after last touchgd=350label0006__cmt>label0022__cmt>// Mouse Click button statusgb=0
+Outgoing0=Tim0TimS0004Init1:1000:1
+Outgoing1=None
+PresetSwitchIgnore=0
+
+[Preset.4]
+Active=1
+Comments=
+Incoming0=None
+Incoming1=Prfm<Incoming Action="Perform"><Name>Up Action</Name></Incoming>
+Incoming10=Prfm<Incoming Action="Perform"><Name>Left Action</Name></Incoming>
+Incoming11=Prfm<Incoming Action="Perform"><Name>Left Action</Name></Incoming>
+Incoming12=None
+Incoming13=Prfm<Incoming Action="Perform"><Name>Right Action</Name></Incoming>
+Incoming14=Prfm<Incoming Action="Perform"><Name>Right Action</Name></Incoming>
+Incoming15=Prfm<Incoming Action="Perform"><Name>Right Action</Name></Incoming>
+Incoming16=None
+Incoming17=Tim0TimT000DRelease Mouse
+Incoming2=Prfm<Incoming Action="Perform"><Name>Up Action</Name></Incoming>
+Incoming3=Prfm<Incoming Action="Perform"><Name>Up Action</Name></Incoming>
+Incoming4=None
+Incoming5=Prfm<Incoming Action="Perform"><Name>Down Action</Name></Incoming>
+Incoming6=Prfm<Incoming Action="Perform"><Name>Down Action</Name></Incoming>
+Incoming7=Prfm<Incoming Action="Perform"><Name>Down Action</Name></Incoming>
+Incoming8=None
+Incoming9=Prfm<Incoming Action="Perform"><Name>Left Action</Name></Incoming>
+Name=Commands
+Name0=----------UP SECTION----------
+Name1=Mouse Move Up
+Name10=Mouse Move Left Click
+Name11=Mouse Move Left Release
+Name12=----------RIGHT SECTION----------
+Name13=Mouse Move Right
+Name14=Mouse Move Right Click
+Name15=Mouse Move Right Release
+Name16=----------TIMER RELEASE CLICK----------
+Name17=Release Mouse
+Name2=Mouse Move Up Click
+Name3=Mouse Move Up Release
+Name4=----------DOWN SECTION----------
+Name5=Mouse Move Down
+Name6=Mouse Move Down Click
+Name7=Mouse Move Down Release
+Name8=----------LEFT SECTION----------
+Name9=Mouse Move Left
+Options0=Actv00Stop00OutO00
+Options1=Actv01Stop00OutO00StMa00000001ga=1
+Options10=Actv01Stop00OutO00StMa00000005label003C__cmt>// If mouse button is already pressed, skip the actionif(gb==1)noexecutelabel0006__cmt>label0036__cmt>// Set gb to 1 to indicate the button is pressedgb=1
+Options11=Actv01Stop00OutO00
+Options12=Actv00Stop00OutO00
+Options13=Actv01Stop00OutO00StMa00000001ga=1
+Options14=Actv01Stop00OutO00StMa00000006label0006__cmt>label003C__cmt>// If mouse button is already pressed, skip the actionif(gb==1)noexecutelabel0006__cmt>label0036__cmt>// Set gb to 1 to indicate the button is pressedgb=1
+Options15=Actv01Stop00OutO00
+Options16=Actv00Stop00OutO00
+Options17=Actv01Stop00OutO00StMa00000002label003D__cmt>// Reset gb to indicate the button is no longer pressedgb=0
+Options2=Actv01Stop00OutO00StMa00000005label003C__cmt>// If mouse button is already pressed, skip the actionif(gb==1)noexecutelabel0006__cmt>label0036__cmt>// Set gb to 1 to indicate the button is pressedgb=1
+Options3=Actv01Stop00OutO00
+Options4=Actv01Stop00OutO00
+Options5=Actv01Stop00OutO00StMa00000001ga=1
+Options6=Actv01Stop00OutO00StMa00000006label0006__cmt>label003C__cmt>// If mouse button is already pressed, skip the actionif(gb==1)noexecutelabel0006__cmt>label0036__cmt>// Set gb to 1 to indicate the button is pressedgb=1
+Options7=Actv01Stop00OutO00
+Options8=Actv00Stop00OutO00
+Options9=Actv01Stop00OutO00StMa00000001ga=1
+Outgoing0=None
+Outgoing1=Mse2000:gn
+Outgoing10=Mse10300
+Outgoing11=Tim0TimS000DRelease Mouse1:gd:1
+Outgoing12=None
+Outgoing13=Mse200gp:0
+Outgoing14=Mse10300
+Outgoing15=Tim0TimS000DRelease Mouse1:gd:1
+Outgoing16=None
+Outgoing17=Mse10400
+Outgoing2=Mse10300
+Outgoing3=Tim0TimS000DRelease Mouse1:gd:1
+Outgoing4=None
+Outgoing5=Mse2000:gp
+Outgoing6=Mse10300
+Outgoing7=Tim0TimS000DRelease Mouse1:gd:1
+Outgoing8=None
+Outgoing9=Mse200gn:0
+PresetSwitchIgnore=0
+
+[Project]
+Author=Centomila
+AuthorWWW=https://centomila.com
+Comments=Changelog\n\n0.5\n- Global Variables:\n  - Change "gp" and "gn" values to adjust relative mouse movement.\n    - Default: gn = -1, gp = 1 (values in pixels, integers only).\n  - Change "gs" to adjust the delay (in milliseconds) after the last encoder touch.\n    - Default: gs = 350 (values in milliseconds, integers only).\n\n0.4\n- Added support for horizontal drag and drop.\n- Separated presets for easier management.\n\n0.3\n- Added an alternative input method via keystrokes.\n\n0.2\n- Fixed accidental double clicks by adding an extra variable on release.\n- Increased the release delay to 500ms to prevent double clicks during slow movements.\n\n0.1\n- Initial prototype.\n
+DefaultInPorts=MIDA00010012Controller MIDI IN
+DefaultOutPorts=MIDA00010013Controller MIDI Out
+Properties=<Properties><P Key="Author YouTube">https://www.youtube.com/@Centomila</P><P Key="License">MIT</P><P Key="Version">0.5</P></Properties>
+Version=2
+
+[Signatures]
+SigName-1=[Midi Translator Pro Internal]
+Signature-1=ow7XkT/UQzx1xHsHec1/bKmyU6ivUqIUCMSyVQCCPSj2YIya9UqvWMBiL6GSGhVsXbgybRi+EQljvH7786esBpvefEMndT7rLtmalTP17YlqIrCpUfugVun3meBGTPSbnu4nZ/K9iuHNUL3Dc+M5W8kQU6NSytTGnNly0dnMZ2E=
+SignedBy-1=Franco Baccarini
+
